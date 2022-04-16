@@ -1,0 +1,915 @@
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/*-----background-----*/
+.charsheet {
+    background-size:100%;
+    width:840px;
+}
+
+/*----------- Tabs Setup -------------*/
+.charsheet div[class^="sheet-tab-content"] {
+/* tab essentials */
+    display: none;
+    padding:10px;  /* tw */
+/* end tab essentials */
+    background-size:840px;
+}
+
+.charsheet input.sheet-tab1:checked ~ div.sheet-tab1,
+.charsheet input.sheet-tab2:checked ~ div.sheet-tab2,
+.charsheet input.sheet-tab3:checked ~ div.sheet-tab3{
+/* tab essentials */
+    display: block;
+/* end tab essentials */
+}
+
+.charsheet input.sheet-tab {
+/* tab essentials */
+    width: 150px;  /* tw */
+    height: 45px;
+    position: relative;
+    opacity: 0;
+    z-index: 998;
+/* end tab essentials */
+    cursor: pointer;    
+}
+
+.charsheet span.sheet-tab {
+/* tab essentials */	
+    display: inline-block; 
+    position: relative;
+    margin-left: -155px; /* tw */
+    width: 150px; /* tw */
+/* end tab essentials */
+    vertical-align: middle;
+    height: 45px; 
+    line-height:45px;
+    cursor: pointer;
+    text-align: center;
+    /* Tabs when not clicked */
+    border: 1px solid orange;
+
+}
+
+.charsheet input.sheet-tab1:checked + span.sheet-tab1,
+.charsheet input.sheet-tab2:checked + span.sheet-tab2,
+.charsheet input.sheet-tab3:checked + span.sheet-tab3{
+    /* Tabs when clicked */
+    border: 2px solid purple;
+}
+
+/*----------- Tab Contents Styling -------------*/
+
+div.sheet-tab1 { 
+    background-color: antiquewhite;
+    margin-left: auto;
+    margin-right: auto;
+    width: 900px;
+}
+
+div.sheet-tab2 { 
+    background: blue;
+}
+
+div.sheet-tab3 { 
+    background: red;
+}
+
+.charsheet .main-body{
+    margin-left: auto;
+    margin-right: auto;
+    width: 900px;
+}
+
+.charsheet .cards {
+    background-color: rgb(47, 198, 33);
+    min-height: 30px;
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+}
+
+.charsheet .card1 {
+    background-color: antiquewhite;
+    min-height: 30px;
+    width: 33.4%;
+    display: flex;
+}
+
+.charsheet .att-boxes{
+    min-height: 100px;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.charsheet button[type=roll].sheet-blank-roll-button {
+    border: 0;
+    background: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+.charsheet button[type=roll].sheet-blank-roll-button::before {
+    content: ""; 
+}
+
+.charsheet .str-box{
+    background-image: url();
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100px;
+    min-height: 150px;
+    width: 90%;
+    font-size: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.charsheet .str-value{
+    font-size: 35px;
+    font-weight: bold;
+    text-align: center;
+    width: 50px;
+    height: 35px;
+    background: none;
+    border: none;
+}
+
+.charsheet .str-mod-value{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    width: 30px;
+    height: 15px;
+    background: none;
+    border: none;
+}
+
+.charsheet .dex-box{
+    background-image: url();
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100px;
+    min-height: 150px;
+    width: 90%;
+    font-size: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.charsheet .dex-value{
+    font-size: 35px;
+    font-weight: bold;
+    text-align: center;
+    width: 50px;
+    height: 35px;
+    background: none;
+    border: none;
+}
+
+.charsheet .dex-mod-value{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    width: 30px;
+    height: 15px;
+    background: none;
+    border: none;
+}
+
+.charsheet .con-box{
+    background-image: url();
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100px;
+    min-height: 150px;
+    width: 90%;
+    font-size: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.charsheet .con-value{
+    font-size: 35px;
+    font-weight: bold;
+    text-align: center;
+    width: 50px;
+    height: 35px;
+    background: none;
+    border: none;
+}
+
+.charsheet .con-mod-value{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    width: 30px;
+    height: 15px;
+    background: none;
+    border: none;
+}
+
+.charsheet .int-box{
+    background-image: url();
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100px;
+    min-height: 150px;
+    width: 90%;
+    font-size: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.charsheet .int-value{
+    font-size: 35px;
+    font-weight: bold;
+    text-align: center;
+    width: 50px;
+    height: 35px;
+    background: none;
+    border: none;
+}
+
+.charsheet .int-mod-value{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    width: 30px;
+    height: 15px;
+    background: none;
+    border: none;
+}
+
+.charsheet .wis-box{
+    background-image: url();
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100px;
+    min-height: 150px;
+    width: 90%;
+    font-size: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.charsheet .wis-value{
+    font-size: 35px;
+    font-weight: bold;
+    text-align: center;
+    width: 50px;
+    height: 35px;
+    background: none;
+    border: none;
+}
+
+.charsheet .wis-mod-value{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    width: 30px;
+    height: 15px;
+    background: none;
+    border: none;
+}
+
+.charsheet .cha-box{
+    background-image: url();
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100px;
+    min-height: 150px;
+    width: 90%;
+    font-size: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.charsheet .cha-value{
+    font-size: 35px;
+    font-weight: bold;
+    text-align: center;
+    width: 50px;
+    height: 35px;
+    background: none;
+    border: none;
+}
+
+.charsheet .cha-mod-value{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    width: 30px;
+    height: 15px;
+    background: none;
+    border: none;
+}
+
+.charsheet .stat-boxes{
+    min-height: 30px;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.charsheet .insp-box{
+    background-color: antiquewhite;
+    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/5e%20Darker%20Dungeons/img/sheet-bar-border.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 165px;
+    min-height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.charsheet .insp-value{
+    font-size: 35px;
+    font-weight: bold;
+    text-align: center;
+    width: 50px;
+    height: 20px;
+    background: none;
+    border: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.charsheet .inspiration-box{
+    font-size: 15px;
+    height: 20px;
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 2px;
+    padding-right: 10px;
+}
+
+.charsheet .prof-box{
+    background-color: antiquewhite;
+    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/5e%20Darker%20Dungeons/img/sheet-bar-border.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 165px;
+    min-height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.charsheet .prof-value{
+    font-size: 35px;
+    font-weight: bold;
+    text-align: center;
+    width: 50px;
+    height: 20px;
+    background: none;
+    border: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.charsheet .proficiency-box{
+    font-size: 15px;
+    height: 20px;
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 2px;
+    padding-right: 10px;
+}
+
+.charsheet .saving-throws-box{
+    /* background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/5e%20Darker%20Dungeons/img/sheet-box-border.png); */
+    background-color: rgb(45, 68, 96);
+    height: 100px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.charsheet .skills-box{
+    background-color: rgb(14, 41, 96);
+    height: 500px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+ 
+.charsheet .card2 {
+    background-color: antiquewhite;
+    min-height: 30px;
+    width: 33.4%;
+}
+
+.charsheet .row1{
+    display: flex;
+}
+
+.charsheet .armor-box{
+    background-color: antiquewhite;
+    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/5e%20Darker%20Dungeons/img/sheet-box-border.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 90px;
+    height: 100px;
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 10px;
+}
+
+.charsheet .ac-score{
+    font-size: 35px;
+    font-weight: bold;
+    text-align: center;
+    width: 50px;
+    height: 20px;
+    background: none;
+    border: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.charsheet .armor-class-box{
+    font-size: 12px;
+    height: 25px;
+    width: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: bold;
+}
+
+.charsheet button[type=roll].init-button {
+    border: 0;
+    background: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    font-size: 12px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: bold;
+}
+.charsheet button[type=roll].init-button::before {
+    content: ""; 
+}
+
+.charsheet .init-box{
+    background-color: antiquewhite;
+    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/5e%20Darker%20Dungeons/img/sheet-box-border.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 90px;
+    height: 100px;
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 10px;
+}
+
+.charsheet .init-score{
+    font-size: 35px;
+    font-weight: bold;
+    text-align: center;
+    width: 50px;
+    height: 20px;
+    background: none;
+    border: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.charsheet .init-button{
+    height: 25px;
+    width: 80px;
+}
+
+.charsheet .speed-box{
+    background-color: antiquewhite;
+    background-image: url(https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/5e%20Darker%20Dungeons/img/sheet-box-border.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 90px;
+    height: 100px;
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 10px;
+}
+
+.charsheet .spd-score{
+    font-size: 35px;
+    font-weight: bold;
+    text-align: center;
+    width: 50px;
+    height: 20px;
+    background: none;
+    border: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.charsheet .spd-box{
+    font-size: 12px;
+    height: 25px;
+    width: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: bold;
+}
+
+.charsheet .hit-point-container{
+    background-color: antiquewhite;
+    outline-style: solid;
+    outline-color: black;
+    min-height: 100px;
+    width: 98%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.charsheet .hpmaxcontainer{
+    display: flex;
+    flex-direction: row;
+    font-size: 10px;
+    border: none;
+    background-color: transparent;
+    align-items: center;
+}
+
+.charsheet .hpmax-score{
+    font-size: 10px;
+    text-align: center;
+    width: 20px;
+    height: 20px;
+    background: none;
+    border: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.charsheet .hp-score{
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    width: 50px;
+    height: 20px;
+    background: none;
+    border: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.charsheet .tempcontainer{
+    background-color: antiquewhite;
+    outline-style: solid;
+    outline-color: black;
+    min-height: 100px;
+    width: 98%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.charsheet .temphp-score{
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    width: 50px;
+    height: 20px;
+    background: none;
+    border: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.charsheet .row2{
+    display: flex;
+}
+
+.charsheet button[type=roll].hit-dice-button {
+    border: 0;
+    background: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    font-size: 12px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: bold;
+}
+.charsheet button[type=roll].hit-dice-button::before {
+    content: ""; 
+}
+
+.charsheet .hit-dice-container{
+    background-color: antiquewhite;
+    outline-style: solid;
+    outline-color: black;
+    min-height: 100px;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.charsheet .hitcontainer{
+    display: flex;
+    flex-direction: row;
+    font-size: 10px;
+    border: none;
+    background-color: transparent;
+    align-items: center;
+}
+
+.charsheet .hitdice-total{
+    font-size: 10px;
+    text-align: center;
+    width: 20px;
+    height: 20px;
+    background: none;
+    border: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.charsheet .hit-dice-score{
+    font-size: 35px;
+    font-weight: bold;
+    text-align: center;
+    width: 50px;
+    height: 20px;
+    background: none;
+    border: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+.charsheet .hit-dice-select{
+    background: none;
+    border: solid;
+    border-color: black;
+}
+
+.charsheet .death-save-box{
+    background-color: rgb(255, 191, 0);
+    height: 100px;
+    width: 45%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.charsheet .weapons-box{
+    background-color: darkgreen;
+    min-height: 30px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.charsheet .card3 {
+    background-color: antiquewhite;
+    min-height: 30px;
+    width: 33.4%;
+}
+
+.charsheet .personality-container{
+    outline-style: solid;
+    outline-color: black;
+    background-color: transparent;
+    height: 150px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.charsheet .personality-title{
+    background-color: transparent;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.charsheet .personality-text{
+    outline-style: solid;
+    outline-color: black;
+    background-color: transparent;
+    flex-grow: 1;
+    font-size: 12px;
+    border: 0;
+    padding: 0;
+    resize: none;
+    margin: 0;
+    height: 133px;
+    line-height: 13px;
+}
+
+.charsheet .ideals-container{
+    outline-style: solid;
+    outline-color: black;
+    background-color: transparent;
+    height: 100px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.charsheet .ideals-title{
+    background-color: transparent;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.charsheet .ideals-text{
+    outline-style: solid;
+    outline-color: black;
+    background-color: transparent;
+    flex-grow: 1;
+    font-size: 12px;
+    border: 0;
+    padding: 0;
+    resize: none;
+    margin: 0;
+    height: 83px;
+    line-height: 13px;
+}
+
+.charsheet .bond-container{
+    outline-style: solid;
+    outline-color: black;
+    background-color: transparent;
+    height: 100px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.charsheet .bond-title{
+    background-color: transparent;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.charsheet .bond-text{
+    outline-style: solid;
+    outline-color: black;
+    background-color: transparent;
+    flex-grow: 1;
+    font-size: 12px;
+    border: 0;
+    padding: 0;
+    resize: none;
+    margin: 0;
+    height: 83px;
+    line-height: 13px;
+}
+
+.charsheet .flaw-container{
+    outline-style: solid;
+    outline-color: black;
+    background-color: transparent;
+    height: 100px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.charsheet .flaw-title{
+    background-color: transparent;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.charsheet .flaw-text{
+    outline-style: solid;
+    outline-color: black;
+    background-color: transparent;
+    flex-grow: 1;
+    font-size: 12px;
+    border: 0;
+    padding: 0;
+    resize: none;
+    margin: 0;
+    height: 83px;
+    line-height: 13px;
+}
+
+.charsheet .row4{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.charsheet .resource1{
+    background-color: rgb(167, 238, 244);
+    height: 100px;
+    width: 45%;
+}
+
+.charsheet .resource2{
+    background-color: rgb(110, 236, 255);
+    height: 100px;
+    width: 45%;
+}
+
+.charsheet .row5{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.charsheet .resource3{
+    background-color: rgb(9, 229, 249);
+    height: 100px;
+    width: 45%;
+}
+
+.charsheet .resource4{
+    background-color: rgb(1, 135, 155);
+    height: 100px;
+    width: 45%;
+}
