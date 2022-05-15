@@ -1,6 +1,6 @@
 # Wands
 
-## **Charater Sheet designed for Wands and Wizards, a 5e Harry Potter RPG**
+## **An Unofficial Character Sheet designed for Wands and Wizards, a 5e Harry Potter RPG**
 
 To open up to the Core sheet, click the “Solemnly Swear” ribbon. If you wish to go back to the Cover page, find and click on the “Mischief Managed” ribbon.
 
